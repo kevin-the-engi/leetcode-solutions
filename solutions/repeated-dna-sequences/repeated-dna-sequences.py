@@ -33,3 +33,23 @@ class Solution2:
         s = s[sequence]
 
       return results
+
+class Solution:
+    def findRepeatedDnaSequences(self, s: str) -> List[str]:
+      if len(s) < 10:
+        return []
+    
+      repeated = set()
+      recorded = set()
+      
+      for i in range(len(s) - 9):
+        # create iteration for length of s minus the first 10-letter sequence
+        substring = s[i:i+10]
+        # track 10-letter sequence with sliding window method
+        
+        if substring in recorded:
+          repeated.add(substring)
+        else:
+          recorded.add(substring)
+          
+      return repeated
