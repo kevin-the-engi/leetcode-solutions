@@ -9,22 +9,23 @@ Given a string s that represents a DNA sequence, return all the 10-letter-long s
 
  
 ---
->**Example 1:**
+**Example 1:**
 
->`Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"`
+```
+Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+Output: ["AAAAACCCCC","CCCCCAAAAA"]
+```
 
->`Output: ["AAAAACCCCC","CCCCCAAAAA"]`
+**Example 2:**
 
----
->**Example 2:**
+```
+Input: s = "AAAAAAAAAAAAA"
+Output: ["AAAAAAAAAA"]
+```
 
->`Input: s = "AAAAAAAAAAAAA"`
+**Constraints:**
 
->`Output: ["AAAAAAAAAA"]`
-
----
->**Constraints:**
-
->`1 <= s.length <= 105`
-
->`s[i] is either 'A', 'C', 'G', or 'T'.`
+```
+1 <= s.length <= 105
+s[i] is either 'A', 'C', 'G', or 'T'.
+```
