@@ -25,7 +25,5 @@ Output: ["AAAAAAAAAA"]
 
 **Constraints:**
 
-```
-1 <= s.length <= 105
-s[i] is either 'A', 'C', 'G', or 'T'.
-```
+* `1 <= s.length <= 10⁵`
+* `s[i] is either 'A', 'C', 'G', or 'T'.`
