@@ -9,7 +9,7 @@
   #       increment start
   #       reset end to next
 
-class Solution:
+class Solution2:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
         start = 0
         end = start + 1 
@@ -27,5 +27,27 @@ class Solution:
             else:
                 start += 1
                 end = start + 1
+                
+        return False
+    
+# store in dict
+# iterate thru nums
+    # check if item exists in dict
+        # if not then add to dict with value: index
+        # if yes and current index is less than or equal to k
+            # return true
+# return false as default
+        
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        tracked = {}
+        # allows search in constant time
+        
+        for index, value in enumerate(nums):
+            # Enumerate() method adds a counter to an iterable and returns it in a form of enumerate object
+            if value in tracked and (index - tracked[value]) <= k:
+                return True
+            else:
+                tracked[value] = index
                 
         return False
