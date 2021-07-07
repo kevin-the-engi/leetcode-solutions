@@ -10,6 +10,7 @@ Return `true` *if there is a cycle in the linked list*. Otherwise, return `false
 ---
 **Example 1:**
 
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/linked-list-cycle/examples/circularlinkedlist.png)
 ```
 Input: head = [3,2,0,-4], pos = 1
 Output: true
