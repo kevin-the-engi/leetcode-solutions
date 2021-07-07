@@ -19,6 +19,8 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 
 **Example 2:**
 
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/linked-list-cycle/examples/circularlinkedlist_test2.png)
+
 ```
 Input: head = [1,2], pos = 0
 Output: true
@@ -26,6 +28,8 @@ Explanation: There is a cycle in the linked list, where the tail connects to the
 ```
 
 **Example 3:**
+
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/linked-list-cycle/examples/circularlinkedlist_test3.png)
 
 ```
 Input: head = [1], pos = -1
