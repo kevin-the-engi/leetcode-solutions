@@ -21,7 +21,7 @@
     // set the last item in stack which is 2nd to last node to null
     // set current head next to the popped node
     // set popped node to 
-
+// NOT OPTIMAL
 
 var reorderList = function(list) {
     let head = list;
