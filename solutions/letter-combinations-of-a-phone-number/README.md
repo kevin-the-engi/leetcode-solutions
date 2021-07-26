@@ -4,6 +4,8 @@ Given a string containing digits from `2-9` inclusive, return all possible lette
 
 A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 
+<img src="https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/letter-combinations-of-a-phone-number/examples/200px-Telephone-keypad2.svg.png" alt="example"/>
+
  
 ---
 **Example 1:**
