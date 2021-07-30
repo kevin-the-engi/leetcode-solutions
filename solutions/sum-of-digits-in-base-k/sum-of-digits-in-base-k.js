@@ -29,7 +29,6 @@ var sumBase = function(n, k) {
         return 1;
     }
     
-    let quotient = 0;
     let remainder = '';
     
     while (n > 0) {
