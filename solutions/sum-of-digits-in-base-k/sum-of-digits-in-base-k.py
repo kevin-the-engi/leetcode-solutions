@@ -20,7 +20,6 @@ class Solution:
         if n == k:
             return 1
         
-        quotient = 0
         remainder = ''
         
         while n > 0:
