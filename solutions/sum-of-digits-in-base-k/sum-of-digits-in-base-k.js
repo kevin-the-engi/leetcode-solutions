@@ -3,6 +3,11 @@
  * @param {number} k
  * @return {number}
  */
+// to convert to base k:
+    // divide n by k, get both quotient and remainder, Ex: 34 / 6 = 5r4
+    // divide quotient by base k, Ex: 5 / 6 = 0r5
+    // repeat
+    // tally up remainders, Ex: 54
 
 // check if n is equal to k
     // if it is, n is already base k so return 1
