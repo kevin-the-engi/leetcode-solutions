@@ -23,7 +23,6 @@
     // if yes, add to sum
 // return sum
 
-
 var rangeSumBST = function(root, low, high) {
     let sum = 0;
     
@@ -45,3 +44,6 @@ var rangeSumBST = function(root, low, high) {
 
     return sum;
 };
+
+// Time complexity is O(n log n) because it compares the current node value and moves down a branch accordingly, eliminating half the results.
+// Space complexity is O(N) because O(N) per each call instance making it linear.
