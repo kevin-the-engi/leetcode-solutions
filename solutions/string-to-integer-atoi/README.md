@@ -95,7 +95,8 @@ Step 2: "-91283472332" ('-' is read, so the result should be negative)
 Step 3: "-91283472332" ("91283472332" is read in)
                      ^
 The parsed integer is -91283472332.
-Since -91283472332 is less than the lower bound of the range [-231, 231 - 1], the final result is clamped to -231 = -2147483648.
+Since -91283472332 is less than the lower bound of the range [-231, 231 - 1], 
+the final result is clamped to -231 = -2147483648.
 ```
 
 **Constraints:**
