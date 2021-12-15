@@ -6,7 +6,7 @@ Given the `head` of a sorted linked list, *delete all duplicates such that each 
 ---
 **Example 1:**
 
-![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/swap-nodes-in-pairs/examples/swap_ex1.jpg)
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/remove-duplicates-from-sorted-list/examples/list1.jpeg)
 ```
 Input: head = [1,1,2]
 Output: [1,2]
@@ -14,6 +14,7 @@ Output: [1,2]
 
 **Example 2:**
 
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/remove-duplicates-from-sorted-list/examples/list2.jpeg)
 ```
 Input: head = [1,1,2,3,3]
 Output: [1,2,3]
