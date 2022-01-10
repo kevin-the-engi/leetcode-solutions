@@ -20,9 +20,7 @@ class Solution:
         if not root:
             return False
         
-        a = False
-        b = False
-        
+        a, b = False, False
         targetSum -= root.val
         
         if targetSum == 0 and not root.left and not root.right:
