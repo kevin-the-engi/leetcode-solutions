@@ -5,6 +5,8 @@
 #         self.left = left
 #         self.right = right
 
+# Goal = Given a root of a tree, find if tree has a node equal to val and return the node.
+
 # recursion
 # base: check if root doesn't exist
 #     if yes then return null
@@ -15,13 +17,16 @@
 #     if no then recurse using right child of root, and val
 
 class Solution:
-    def searchBST(self, root: TreeNode, val: int) -> TreeNode:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         if not root:
             return None
         if root.val == val:
             return root
         
-        if val < root.val:
+        if root.val > val:
             return self.searchBST(root.left, val)
         else:
             return self.searchBST(root.right, val)
+        
+# Time complexity = O(LogN)
+# Space complexity = O(1)
