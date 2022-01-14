@@ -11,25 +11,23 @@
 #         if so, check the first half of the partitioned arr by calling function with 0 and mid
 #     or if target is greater than arr[mid]
 #         then check the second half of the partitioned arr by calling function with mid and end
-        
-import math    
 
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
-        def innerFunction(start: int, end: int) -> int:
-            mid = math.floor((end - start) / 2) + start
-            
-            if nums[mid] == target:
-                return mid
-            elif start >= end:
-                return -1
-            
-            if target < nums[mid]:
-                return innerFunction(0, mid - 1)
-            else:
-                return innerFunction(mid + 1, end)
+        return self.recursion(nums, target, 0, len(nums) - 1)
+
+    def recursion(self, nums: List[int], target: int, start: int, end: int) -> int:
+        mid = math.floor((end - start) / 2) + start
         
-        return innerFunction(0, len(nums) - 1)
-    
+        if nums[mid] == target:
+            return mid
+        if start > end:
+            return -1
+        
+        if nums[mid] > target:
+            return self.recursion(nums, target, 0, mid - 1)
+        else:
+            return self.recursion(nums, target, mid + 1, end)
+
 # Time complexity = O(log N) since process narrows down search results by half each time.
 # Space complexity = O(1)
