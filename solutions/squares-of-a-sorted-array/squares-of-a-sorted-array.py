@@ -28,3 +28,38 @@ class Solution:
     
 # Time Complexity = O(N)
 # Space Complexity = O(N)
+
+
+# Goal = Given a sorted list of values, return a sorted list with those values squared.
+# Use two-pointers to sort thru list of values
+
+# create an array of nums length
+# create start and end pointers for start and end of list
+# loop while end - start > 0 so it goes thru entire list
+#     if start value squared is less than end value squared then assign nums[end-start] with end value squared
+#         decrement end
+#     otherwise assign nums[end-start] with start value squared
+#         increment start
+# return sorted list
+
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        squares = [None] * len(nums)
+        start = 0
+        end = len(nums) - 1
+        
+        while end - start >= 0:
+            a = nums[start] ** 2
+            b = nums[end] ** 2
+            
+            if a < b:
+                squares[end - start] = b
+                end -= 1
+            else:
+                squares[end - start] = a
+                start += 1
+                
+        return squares
+        
+# Time complexity = O(n)
+# Space complexity = O(n) 
