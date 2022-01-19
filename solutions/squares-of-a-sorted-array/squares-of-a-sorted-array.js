@@ -35,3 +35,40 @@ var sortedSquares = function(nums) {
 
 // Time Complexity = O(N)
 // Space Complexity = O(N)
+
+
+// Goal = Given a sorted list of values, return a sorted list with those values squared.
+// Use two-pointers to sort thru list of values
+
+// create an array of nums length
+// create start and end pointers for start and end of list
+// loop while end - start > 0 so it goes thru entire list
+    // if start value squared is less than end value squared then assign nums[end-start] with end value squared
+        // decrement end
+    // otherwise assign nums[end-start] with start value squared
+        // increment start
+// return sorted list
+
+var sortedSquares = function(nums) {
+    let sorted = new Array(nums.length)
+    let start = 0
+    let end = nums.length - 1
+    
+    while (end - start >= 0) {
+        let a = nums[start] ** 2
+        let b = nums[end] ** 2
+        
+        if (a < b) {
+            sorted[end - start] = b
+            end--
+        } else {
+            sorted[end - start] = a
+            start++
+        }
+    }
+    
+    return sorted
+};
+
+// Time complexity = O(n)
+// Space complexity = O(n)
