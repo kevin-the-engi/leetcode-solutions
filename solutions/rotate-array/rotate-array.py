@@ -1,17 +1,25 @@
-# create a rotated version of the nums array by working by using i + k % length to get index to store first value and continue iterating
-# replace every element in nums array with rotated version
+# Goal = Given an array, move/rotate values by k places/steps.
+
+# create an array of size nums length
+# loop thru nums array
+#     get index for rotated array using index + k % nums length so end values loop around correctly
+#     place current value into new index of rotated array
+# loop thru nums array
+#     replace each value with those in rotated array
+# return nums
 
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         rotated = [None] * len(nums)
         
-        for i in range(len(nums)):
-            rotated[(i + k) % len(nums)] = nums[i]
-        
+        for i, value in enumerate(nums):
+            index = (i + k) % len(nums)
+            rotated[index] = value
+            
         for i in range(len(nums)):
             nums[i] = rotated[i]
             
         return nums
-    
-# Time complexity = O(N)
-# Space complexity = O(N)
+        
+# Time complexity = O(n)
+# Space complexity = O(n) for dynamic array. However, O(1) for fixed-size array
