@@ -3,35 +3,6 @@
  * @return {number}
  */
 
-// Given a string s, find the length of the longest substring without repeating characters.
-
-// Example 1:
-
-// Input: s = "abcabcbb"
-// Output: 3
-// Explanation: The answer is "abc", with the length of 3.
-// Example 2:
-
-// Input: s = "bbbbb"
-// Output: 1
-// Explanation: The answer is "b", with the length of 1.
-// Example 3:
-
-// Input: s = "pwwkew"
-// Output: 3
-// Explanation: The answer is "wke", with the length of 3.
-// Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
-// Example 4:
-
-// Input: s = ""
-// Output: 0
- 
-
-// Constraints:
-
-// 0 <= s.length <= 5 * 104
-// s consists of English letters, digits, symbols and spaces.
-
 var lengthOfLongestSubstring = function(s) {
   // track substring
   // track longest substring
@@ -65,3 +36,52 @@ var lengthOfLongestSubstring = function(s) {
 
   return longest;
 };
+
+
+// Goal = Given a string, find the length of the longest substring.
+// Track each char with a sliding window that extends right window for nonrepeating chars and shrinks left window whenever a repeating char is encountered so only nonrepeating chars exist in window and tracker.
+
+// track chars in string
+// track current length
+// track max length
+// create two pointers at 0
+// loop until end pointer reaches end
+    // if char doesn't exist in tracker then add char to tracker since it's not a repeating char
+        // increment end pointer
+        // increment current length
+    // else it's a repeating char so delete start char from tracker
+        // decrement current length
+        // increment start pointer
+    // update max length if current length is greater
+// return max length
+
+var lengthOfLongestSubstring = function(s) {
+    if (s.length === 1) {
+        return 1
+    }
+    
+    let tracker = new Set()
+    let len = 0
+    let maxLen = 0
+    let start = 0
+    let end = 0
+    
+    while (end < s.length) {
+        if (tracker.has(s[end])) {
+            tracker.delete(s[start])
+            len--
+            start++
+        } else {
+            tracker.add(s[end])
+            len++
+            end++
+        }
+        
+        maxLen = Math.max(len, maxLen)
+    }
+    
+    return maxLen
+};
+
+// Time complexity = O(n)
+// Space complexity = O(n)
