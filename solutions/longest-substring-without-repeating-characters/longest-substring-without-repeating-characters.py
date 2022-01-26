@@ -1,32 +1,3 @@
-# Given a string s, find the length of the longest substring without repeating characters.
-# Example 1:
-
-# Input: s = "abcabcbb"
-# Output: 3
-# Explanation: The answer is "abc", with the length of 3.
-
-# Example 2:
-
-# Input: s = "bbbbb"
-# Output: 1
-# Explanation: The answer is "b", with the length of 1.
-# Example 3:
-
-# Input: s = "pwwkew"
-# Output: 3
-# Explanation: The answer is "wke", with the length of 3.
-# Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
-# Example 4:
-
-# Input: s = ""
-# Output: 0
-
-# Constraints:
-
-# 0 <= s.length <= 5 * 104
-# s consists of English letters, digits, symbols and spaces.
-
-
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
 #       iterate thru string s
@@ -54,3 +25,48 @@ class Solution:
         longest = max(longest, len(substr))
       
       return longest
+
+
+# Goal = Given a string, find the length of the longest substring.
+# Track each char with a sliding window that extends right window for nonrepeating chars and shrinks left window whenever a repeating char is encountered so only nonrepeating chars exist in window and tracker.
+
+# track chars in string
+# track current length
+# track max length
+# create two pointers at 0
+# loop until end pointer reaches end
+#     if char doesn't exist in tracker then add char to tracker since it's not a repeating char
+#         increment end pointer
+#         increment current length
+#     else it's a repeating char so delete start char from tracker
+#         decrement current length
+#         increment start pointer
+#     update max length if current length is greater
+# return max length
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        if len(s) == 1:
+            return 1
+        
+        tracker = set()
+        length = 0
+        maxLen = 0
+        left = 0
+        right = 0
+        
+        while right < len(s):
+            if s[right] not in tracker:
+                tracker.add(s[right])
+                length += 1
+                right += 1
+            else:
+                tracker.remove(s[left])
+                length -= 1
+                left += 1
+            maxLen = max(length, maxLen)
+        
+        return maxLen
+        
+# Time complexity = O(n)
+# Space complexity = O(n)
