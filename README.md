@@ -1,4 +1,4 @@
-<!-- # | [Title](Leetcode_url) | Difficulty | [ReadMe](repo_url) | [Javascript](JS_url), [Python](Py_url) | Notes -->
+<!-- # | [Title](Leetcode_url) | Difficulty | ReadMe | Javascript, Python | Notes -->
 
 # LeetCode Solutions
 \# | Title | Difficulty | Repo | Solution | Notes
