@@ -17,7 +17,7 @@ Return `true` if and only if it is **bipartite**.
 ---
 **Example 1:**
 
-![image]([https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/add-two-numbers/examples/addtwonumber1.jpg](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/is-graph-bipartite/examples/bi2.jpeg))
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/is-graph-bipartite/examples/bi2.jpeg)
 ```
 Input: graph = [[1,2,3],[0,2],[0,1,3],[0,2]]
 Output: false
@@ -26,7 +26,7 @@ Explanation: There is no way to partition the nodes into two independent sets su
 
 **Example 2:**
 
-![image]([https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/add-two-numbers/examples/addtwonumber1.jpg](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/is-graph-bipartite/examples/bi1.jpeg))
+![image](https://github.com/kevin-the-engi/leetcode-solutions/blob/master/solutions/is-graph-bipartite/examples/bi1.jpeg)
 ```
 Input: graph = [[1,3],[0,2],[1,3],[0,2]]
 Output: true
