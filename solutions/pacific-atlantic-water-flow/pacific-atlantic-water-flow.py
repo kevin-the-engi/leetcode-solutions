@@ -61,5 +61,5 @@ class Solution:
 
         return
 
-# Time complexity = O(n²)
-# Space complexity = O(n²)
+# Time complexity = O(mn)
+# Space complexity = O(mn)
